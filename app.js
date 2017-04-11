@@ -19,12 +19,14 @@ firstAndPike.cookiesPerHour();
 console.log(firstAndPike.hourlySales, 'hourlySales');
 var cookiesPerHourUl = document.getElementById('cookies-per-hour');
 console.log(cookiesPerHourUl, 'this is what were looking for');
-// for (var i = 0; i < firstAndPike.hourlySales.length; i++);
-// cookiesPerHourLi = document.createElement('li');
-// cookiesPerHourLi.setAttribute('class', 'hourlySales');
-// cookiesPerHourLi.textContent = firstAndPike.hourlySales[i];
-// cookiesPerHourUl.appendChild(hourlySales[i]);
-
+for (var i = 0; i < firstAndPike.hourlySales.length; i++){
+  var cookiesPerHourLi = document.createElement('li');
+  console.log(cookiesPerHourLi, 'cookiesPerHourLi');
+  cookiesPerHourLi.setAttribute('class', 'hourlySales');
+  cookiesPerHourLi.textContent = firstAndPike.hourlySales[i];
+  console.log(cookiesPerHourLi.textContent);
+  cookiesPerHourUl.appendChild(cookiesPerHourLi);
+}
 
 var seaTacAirport = {
   minCust: 3,
