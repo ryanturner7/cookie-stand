@@ -11,23 +11,31 @@ var firstAndPike = {
   cookiesPerHour: function(){
     for(var i = 0; i < 14 ; i++){
       var avgCookies = this.getRandomNumCust() * this.avgSale;
-      this.hourlySales.push(avgCookies);
+      this.hourlySales.push(Math.floor(avgCookies));
     };
   }
 };
 firstAndPike.cookiesPerHour();
 console.log(firstAndPike.hourlySales);
+
 var seaTacAirport = {
   minCust: 3,
   maxCust: 24,
   avgSale: 1.2,
+  hourlySales:[],
   getRandomNumCust: function (){
     return Math.floor(Math.random() * (this.maxCust - this.minCust)) + this.minCust;
-},
-cookiesPerHour: function(){
-  for(var i = 0; i < 14 ; i++){
-    var avgCookies = this.getRandomNumCust() * this.avgSale;
-    this.hourlySales.push(avgCookies);
+  },
+  cookiesPerHour: function(){
+    for(var i = 0; i < 14 ; i++){
+      var avgCookies = this.getRandomNumCust() * this.avgSale;
+      this.hourlySales.push(Math.floor(avgCookies));
+    };
+  }
+};
+seaTacAirport.cookiesPerHour();
+console.log(seaTacAirport.hourlySales);
+
 var seattleCenter = {
   minCust: 11,
   maxCust: 38,
@@ -36,6 +44,7 @@ var seattleCenter = {
     return Math.floor(Math.random() * (this.maxCust - this.minCust)) + this.minCust;
   }
 };
+
 var capitolHill = {
   minCust: 20,
   maxCust: 38,
