@@ -1,13 +1,27 @@
+* {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-weight: normal;
+}
+
 body {
   background-color: silver;
   color: white;
 
 }
 
+table{}
+
+  td{
+    width: 5%;
+  }
+
 ul {
   font-family: Verdana, sans-serif;
 
 }
 h1 {
-  font-family: Georgia; 
+  font-family: Georgia;
 }
