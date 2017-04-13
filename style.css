@@ -4,18 +4,40 @@
   margin: 0;
   box-sizing: border-box;
   font-weight: normal;
+  color: yellow;
 }
 
 body {
-  background-color: silver;
+  background-color: teal;
   color: white;
 
 }
 
-table{}
+table {
+border-collapse: collapse;
+width: 100%;
+
+}
+
+table, td, tr {
+  border: 1px solid indigo;
+}
+input {
+  width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: black;
+    color: yellow;
+
+
+
+
+}
 
   td{
     width: 5%;
+    height: 50;
   }
 
 ul {

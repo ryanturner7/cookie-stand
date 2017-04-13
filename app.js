@@ -93,7 +93,7 @@ function handleStoreCreateSubmit(submit){
   avgSale = parseInt(avgSale);
   var cookieStore = new Store(name, minCust, maxCust, avgSale);
   cookieStore.getTable();
-
 }
+
 var storeCreateFrom = document.getElementById('createStore');
 storeCreateFrom.addEventListener('submit', handleStoreCreateSubmit);
