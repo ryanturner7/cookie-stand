@@ -32,7 +32,7 @@ Store.prototype.cookiesPerHour = function(){
     this.hourlySales.push(Math.floor(avgCookies));
   }
 };
-Store.prototype.addList = function(){
+Store.prototype.addItem = function(){
   this.cookiesPerHour();
   var header = document.createElement('h2');
   header.textContent = this.header;
@@ -80,3 +80,20 @@ console.log('capitolHill', capitolHill);
 capitolHill.getTable();
 console.log('alki', alki);
 alki.getTable();
+
+function handleStoreCreateSubmit(submit){
+  event.preventDefault();
+  var form = submit.target;
+  var name = form.storeName.value;
+  var minCust = form.minCust.value;
+  minCust = parseInt(minCust);
+  var maxCust = form.maxCust.value;
+  maxCust = parseInt(maxCust);
+  var avgSale = form.avgSale.value;
+  avgSale = parseInt(avgSale);
+  var cookieStore = new Store(name, minCust, maxCust, avgSale);
+  cookieStore.getTable();
+
+}
+var storeCreateFrom = document.getElementById('createStore');
+storeCreateFrom.addEventListener('submit', handleStoreCreateSubmit);
